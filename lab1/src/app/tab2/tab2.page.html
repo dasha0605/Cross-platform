@@ -1,0 +1,23 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+<ion-content [fullscreen]="true">
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Завдання 2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>На заданому проміжку чисел [a, b] знайдіть кількість чисел, які при діленні на 3 дають в остачі 1. Потрібно вивести як самі числа так і
+        результати обрахунку.</p>
+      <ion-item>
+        <ion-label position="stacked" color="medium">Початок проміжку</ion-label>
+        <ion-input type="number" [(ngModel)]="start"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" color="medium">Кінець проміжку</ion-label>
+        <ion-input type="number" [(ngModel)]="end"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="calculateTask2()">Розрахунок</ion-button>
+      <ion-item><p>Результат: {{ result2 }}</p></ion-item>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,40 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+<ion-content [fullscreen]="true">
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Завдання 3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Згенерувати матрицю розміром NxN. Виокреміть усі елементи, які знаходяться на парних стовпцях і більші за 50.</p>
+      <ion-item>
+        <ion-label position="stacked" color="medium">Розмір матриці N</ion-label>
+        <ion-input type="number" [(ngModel)]="size"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="generateMatrix(size)">Генерація</ion-button>
+
+      <!-- Виводимо матрицю у вигляді HTML-таблиці -->
+      <ion-card *ngIf="matrix.length > 0">
+        <ion-card-header>
+          <ion-card-title>Матриця</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <table class="matrix-table">
+            <tr *ngFor="let row of matrix">
+              <td 
+                *ngFor="let cell of row; let j = index"
+                [ngClass]="{'highlight': shouldHighlight(cell, j)}">
+                {{ cell }}
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Результат -->
+      <ion-item>
+        <p>Результат: {{ matrixResult }}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

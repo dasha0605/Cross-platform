@@ -1,0 +1,28 @@
+<app-my-header name="Лабораторна робота №1"></app-my-header>
+<ion-content [fullscreen]="true">
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Завдання 1</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Задано три числа. Знайти добуток тих з них, які більші 10, якщо їхня сума непарна.</p>
+      <ion-item>
+        <ion-label position="stacked" color="medium">Перше число</ion-label>
+        <ion-input type="number" [(ngModel)]="a"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" color="medium">Друге число</ion-label>
+        <ion-input type="number" [(ngModel)]="b"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" color="medium">Третє число</ion-label>
+        <ion-input type="number" [(ngModel)]="c"></ion-input>
+      </ion-item>
+      
+      <ion-button expand="block" (click)="calculateTask1()">Розрахунок</ion-button>
+      <ion-item><p>Сума: {{ sum }}</p></ion-item>
+      <ion-item><p>Результат: {{ result1 }}</p></ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
