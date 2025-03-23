@@ -12,7 +12,7 @@
       </ion-item>
       <ion-button expand="block" (click)="generateMatrix(size)">Генерація</ion-button>
 
-      <!-- Виводимо матрицю у вигляді HTML-таблиці -->
+      
       <ion-card *ngIf="matrix.length > 0">
         <ion-card-header>
           <ion-card-title>Матриця</ion-card-title>
@@ -30,7 +30,7 @@
         </ion-card-content>
       </ion-card>
 
-      <!-- Результат -->
+   
       <ion-item>
         <p>Результат: {{ matrixResult }}</p>
       </ion-item>
