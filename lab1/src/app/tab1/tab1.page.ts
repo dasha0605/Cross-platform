@@ -33,13 +33,15 @@ export class Tab1Page {
       return;
     }
     
-    this.sum = numA + numB + numC;
-    if (this.sum % 2 === 1) { // якщо сума непарна
-      const numbers = [numA, numB, numC].filter(num => num > 10);
-      this.result1 = numbers.length > 0 ? numbers.reduce((acc, val) => acc * val, 1) : 'Немає чисел більших за 10';
-    } else {
-      this.result1 = 'Сума не є непарною';
-    }
+    this.sum = [numA, numB, numC].filter(num => num >= 10).reduce((acc, val) => acc + val, 0);
+
+if (this.sum % 2 === 1) { 
+  const numbers = [numA, numB, numC].filter(num => num >= 10);
+  this.result1 = numbers.length > 0 ? numbers.reduce((acc, val) => acc * val, 1) : 'Немає чисел більших за 10';
+} else {
+  this.result1 = 'Сума не є непарною';
+}
+
   }
 }
 

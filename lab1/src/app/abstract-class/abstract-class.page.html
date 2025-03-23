@@ -1,0 +1,39 @@
+<app-my-header name="Лабораторна робота №3"></app-my-header>
+
+<ion-content class="plant-list">
+  <h1 class="page-title">Список рослин</h1>
+  <ion-list>
+    <ion-item *ngFor="let plant of plants">
+      <ion-label>
+        <h2>{{ plant.name }}</h2>
+        <p>Висота: {{ plant.height }} м</p>
+        <p>Тривалість життя: {{ plant.lifespan }} років</p>
+        <p>{{ plant.additionalInfo() }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="getTallestPlants().length" class="tallest-plants">
+    <h2>Найвищі рослини</h2>
+    <ul>
+      <li *ngFor="let plant of getTallestPlants()">
+        <strong>{{ plant.name }}</strong>
+        <p>Висота: {{ plant.height }} м</p>
+        <p>Тривалість життя: {{ plant.lifespan }} років</p>
+        <p>{{ plant.additionalInfo() }}</p>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="getShortestPlants().length" class="shortest-plants">
+    <h2>Найнижчі рослини</h2>
+    <ul>
+      <li *ngFor="let plant of getShortestPlants()">
+        <strong>{{ plant.name }}</strong>
+        <p>Висота: {{ plant.height }} м</p>
+        <p>Тривалість життя: {{ plant.lifespan }} років</p>
+        <p>{{ plant.additionalInfo() }}</p>
+      </li>
+    </ul>
+  </div>
+</ion-content>

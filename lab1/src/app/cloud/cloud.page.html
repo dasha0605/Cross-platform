@@ -1,0 +1,35 @@
+<app-my-header name="Лабораторна робота №2"></app-my-header>
+<ion-content>
+  <!-- Фільтр за жанрами -->
+  <ion-segment [(ngModel)]="selectedGenre" (ionChange)="filterBooksByGenre()">
+    <ion-segment-button value="all">Всі жанри</ion-segment-button>
+    <ion-segment-button *ngFor="let genre of genres" [value]="genre">{{ genre }}</ion-segment-button>
+  </ion-segment>
+
+  <!-- Контейнер для книг -->
+  <div class="books-container">
+    <ng-container *ngIf="filterBooksByGenre().length > 0; else noBooks">
+      <ion-card *ngFor="let book of filterBooksByGenre()" class="book-card">
+        <ion-card-header class="book-card-header">
+          <ion-card-title>{{ book.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="book-card-content">
+          <p><strong>Автор:</strong> {{ book.author }}</p>
+          <p><strong>Жанр:</strong> {{ book.genre }}</p>
+          <p><strong>Сторінок:</strong> {{ book.pages }}</p>
+          <p><strong>Рік:</strong> {{ book.year }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+  </div>
+
+  <ng-template #noBooks>
+    <p class="no-books">Немає книг у цьому жанрі.</p>
+  </ng-template>
+
+  <!-- Блок графіка -->
+  <div class="chart-container">
+    <h2>Статистика книг за роками</h2>
+    <canvas #lineCanvas></canvas>
+  </div>
+</ion-content>

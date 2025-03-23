@@ -1,13 +1,13 @@
 .matrix-table {
     border-collapse: collapse;
-    margin: 20px auto;  // Центруємо таблицю
+    margin: 20px auto;  
   }
   
   .matrix-table td {
     border: 1px solid #ccc;
     padding: 8px 16px;
     text-align: center;
-    min-width: 40px;   // Фіксована мінімальна ширина клітинки
+    min-width: 40px;   
   }
   
   .highlight {

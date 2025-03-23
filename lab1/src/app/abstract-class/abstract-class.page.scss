@@ -1,0 +1,137 @@
+ion-content {
+    text-align: center;
+    background: linear-gradient(135deg, #b2fefa, #0ed2f7);
+    height: auto;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plant-list {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tallest-plants, .shortest-plants {
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background: none;
+    box-shadow: none;
+}
+
+.tallest-plants h2, .shortest-plants h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #3a75ce;
+    margin-bottom: 15px;
+}
+
+.tallest-plants ul, .shortest-plants ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tallest-plants li, .shortest-plants li {
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+ion-card-content p {
+    font-size: 0.9em;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+ion-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+ion-item {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-left: 8px solid #ade6f2;
+}
+
+ion-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+ion-label h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #222;
+}
+
+ion-label p {
+    font-size: 1.1em;
+    color: #444;
+    margin: 5px 0;
+}
+
+ion-card {
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: block;
+}
+
+ion-card-header {
+    font-weight: bold;
+    font-size: 1.8em;
+    background: #3a75ce;
+    color: white;
+    padding: 25px;
+    border-radius: 20px 20px 0 0;
+    text-transform: uppercase;
+}
+
+ion-card-content {
+    font-size: 1.5em;
+    color: #333;
+    padding: 25px;
+    font-weight: bold;
+}
+
+ion-card-title {
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ion-item, ion-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
