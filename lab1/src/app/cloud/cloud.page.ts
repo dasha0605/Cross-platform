@@ -5,7 +5,9 @@ import { BookList } from '../class/books/bookList';
 import { Book } from '../class/books/book';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
+
 import { MyHeaderComponent } from "../my_header/my-header.component";
+
 
 import { 
   IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, 
@@ -20,7 +22,11 @@ import {
   imports: [
     CommonModule, // Додаємо підтримку *ngIf
     FormsModule, IonContent, IonCard, IonCardHeader, 
-    IonCardTitle, IonCardContent, MyHeaderComponent,
+
+    IonCardTitle, IonCardContent,
+
+    IonCardTitle, IonCardContent, 
+
     IonSegment, IonSegmentButton
   ]
 })
